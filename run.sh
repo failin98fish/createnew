@@ -44,6 +44,7 @@ elif [[ $a =~ $C ]];then
 elif [[ $a =~ $U ]];then
     echo $U
     echo "开始安装docker"
+    sudo apt-get update
     sudo apt install docker
     sudo apt install docker-compose
     sudo systemctl start docker
