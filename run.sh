@@ -7,6 +7,8 @@ EOF
 
 echo "更改root密码"
 
+cp -r
+
 a=`uname  -a`
 public_string="Linux"
  
