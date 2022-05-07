@@ -18,22 +18,22 @@ D="Darwin"
 C="CentOS"
 U="Ubuntu"
  
- 
-#centos os check
-FILE_EXE=/etc/redhat-release
- 
-if [ -f "$FILE_EXE" ];then
-	if [[ `cat /etc/redhat-release` =~ $C ]];then
-		echo $C
-		exit
-	fi
-fi
+
  
  
 if [[ $a =~ $D ]];then
     echo "mac"
 elif [[ $a =~ $C ]];then
     echo $C
+    #centos os check
+	FILE_EXE=/etc/redhat-release
+ 
+	if [ -f "$FILE_EXE" ];then
+		if [[ `cat /etc/redhat-release` =~ $C ]];then
+			echo $C
+			exit
+		fi
+	fi
 elif [[ $a =~ $U ]];then
     echo $U
     "开始安装docker"
